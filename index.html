@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Cooking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fffaf0;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff7043;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #d84315;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #ff7043;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e64a19;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #eee;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Cooking Basics</h1>
+        <p>Learn the essentials of cooking delicious meals at home.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>What is Cooking?</h2>
+            <p>Cooking is the art, science, and craft of preparing food using heat. It can involve a wide range of techniques, tools, and ingredients, and it's practiced in homes and restaurants around the world.</p>
+        </section>
+
+        <section>
+            <h2>Basic Cooking Tips</h2>
+            <ul>
+                <li>Always read the recipe first.</li>
+                <li>Prep your ingredients before you start.</li>
+                <li>Keep your knives sharp.</li>
+                <li>Clean as you go.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Need a Tip?</h2>
+            <button onclick="showTip()">Click for a Random Cooking Tip</button>
+            <p id="tipDisplay" style="margin-top:10px; font-weight: bold;"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cooking Basics</p>
+    </footer>
+
+    <script>
+        const tips = [
+            "Always taste as you go.",
+            "Use fresh herbs for better flavor.",
+            "Let meat rest before cutting.",
+            "Use a thermometer to check doneness.",
+            "Don't overcrowd the pan!",
+            "Clean your cutting board immediately after cutting raw meat.",
+            "Use unsalted butter to control salt levels.",
+            "Heat your pan before adding oil."
+        ];
+
+        function showTip() {
+            const randomIndex = Math.floor(Math.random() * tips.length);
+            const tip = tips[randomIndex];
+            document.getElementById("tipDisplay").innerText = tip;
+        }
+    </script>
+</body>
+</html>
